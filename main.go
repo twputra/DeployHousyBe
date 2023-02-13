@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"housy/database"
 	"housy/pkg/mysql"
 	"housy/routes"
@@ -23,6 +22,7 @@ func main() {
 	}
 	// initial DB
 	mysql.DatabaseInit()
+	
 
 	// run migration
 	database.RunMigration()
@@ -40,7 +40,7 @@ func main() {
 	var AllowedOrigins = handlers.AllowedOrigins([]string{"*"})
 
 	var port = os.Getenv("PORT")
-	fmt.Println("server running" + port)
+	// fmt.Println("server running" + port)
 
 	// Embed the setup allowed in 2 parameter on this below code ...
 	http.ListenAndServe(":"+port, handlers.CORS(AllowedHeaders, AllowedMethods, AllowedOrigins)(r))
