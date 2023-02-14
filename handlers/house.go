@@ -44,7 +44,7 @@ func (h *handlerHouse) FindHouses(w http.ResponseWriter, r *http.Request) {
 	// }
 
 	for i, p := range houses {
-		imagePath := os.Getenv("PATH_FILE") + p.Image
+		// imagePath := os.Getenv("PATH_FILE") + p.Image
 		houses[i].Image = imagePath
 	}
 
