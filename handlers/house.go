@@ -21,7 +21,6 @@ import (
 	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
 )
 
-var path_file = "http://localhost:5000/uploads/"
 
 type handlerHouse struct {
 	HouseRepository repositories.HouseRepository
