@@ -43,10 +43,10 @@ func (h *handlerHouse) FindHouses(w http.ResponseWriter, r *http.Request) {
 	// 	houses[i].Image = path_file + p.Image
 	// }
 
-	for i, p := range houses {
+	// for i, p := range houses {
 		// imagePath := os.Getenv("PATH_FILE") + p.Image
-		houses[i].Image = imagePath
-	}
+		// houses[i].Image = imagePath
+	// }
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: houses}
@@ -67,7 +67,7 @@ func (h *handlerHouse) GetHouse(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// house.Image = path_file + house.Image
-	house.Image = os.Getenv("PATH_FILE") + house.Image
+	// house.Image = os.Getenv("PATH_FILE") + house.Image
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: convertResponseHouse(house)}
